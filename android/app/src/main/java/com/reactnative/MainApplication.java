@@ -3,6 +3,12 @@ package com.reactnative;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.react.rnspinkit.RNSpinkitPackage;
+import ui.materialshadows.RNMaterialShadowsPackage;
+import cn.reactnative.httpcache.HttpCachePackage;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.brentvatne.react.ReactVideoPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -26,6 +32,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SvgPackage(),
+            new SplashScreenReactPackage(),
+            new RNSpinkitPackage(),
+            new RNMaterialShadowsPackage(),
+            new HttpCachePackage(),
+            new RNDeviceInfo(),
             new ReactVideoPackage(),
             new ImagePickerPackage(),
           new VectorIconsPackage()
