@@ -1,8 +1,8 @@
 /**
  * 主题
  */
-import { observable, action, computed } from 'mobx'
-import { Platform, StatusBar, DeviceInfo } from 'react-native'
+import { observable, action } from 'mobx';
+import { Platform, StatusBar, DeviceInfo } from 'react-native';
 
 export const Theme = {
   //主题颜色
@@ -37,7 +37,7 @@ export const Theme = {
       return 44;
     }
     if (Platform.OS === 'android') {
-      if (Platform.Version < 19) return 0;
+      if (Platform.Version < 21) return 0;
       return StatusBar.currentHeight;
     }
     return 20;

@@ -1,3 +1,6 @@
+/**
+ * 图片资源
+ */
 export const images = {
   ic_home: require('./image/ic_home.png'),
   ic_cart: require('./image/ic_cart.png'),

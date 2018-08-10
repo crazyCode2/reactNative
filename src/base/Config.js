@@ -2,19 +2,19 @@
  * 配置文件
  */
 import {Toast, Label, ListRow, Button} from 'teaset';
-import {TextInput, Text, TouchableOpacity, Platform, StatusBar} from 'react-native'
-import {configure} from 'mobx'
-import {addCustomProps} from '../utils'
+import {TextInput, Text, TouchableOpacity, Platform, StatusBar} from 'react-native';
+import {configure} from 'mobx';
+import {addCustomProps} from '../utils';
 
 /**
  * 更改三个文件控件字体大小随系统改变的属性,如果想更改其它第三方的默认属性也可以这样改
  */
 addCustomProps(Text, {allowFontScaling: false});
 addCustomProps(TextInput, {allowFontScaling: false});
-addCustomProps(Label, {allowFontScaling: false});
+// addCustomProps(Label, {allowFontScaling: false});
 addCustomProps(TouchableOpacity, {activeOpacity: 0.7});
-addCustomProps(ListRow, {activeOpacity: 0.7});
-addCustomProps(Button, {activeOpacity: 0.7});
+// addCustomProps(ListRow, {activeOpacity: 0.7});
+// addCustomProps(Button, {activeOpacity: 0.7});
 
 if (Platform.OS === 'android') {
   StatusBar.setTranslucent(true);

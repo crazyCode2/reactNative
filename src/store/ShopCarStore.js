@@ -1,15 +1,17 @@
 /**
- * 购物车 数据
+ * 购物车数据
  */
 import { observable, action, computed, autorun } from 'mobx';
 
 export class ShopCarStore {
+
   @observable
   data: [ShopData] = [];
   @observable
   isEditMode: boolean = false;
   @observable
   isAllCheck: boolean = true;
+
 
   constructor() {
     autorun(() => {

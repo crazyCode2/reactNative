@@ -1,5 +1,5 @@
 /**
- * 移动视图 组件
+ * 移动视图
  */
 import React, {PureComponent} from 'react';
 import {
@@ -7,9 +7,7 @@ import {
   PanResponder,
   StyleSheet,
   Dimensions,
-  StatusBar
 } from 'react-native';
-import PropTypes from 'prop-types'
 
 const {width, height} = Dimensions.get('window');
 export default class MoveView extends PureComponent {
@@ -26,7 +24,7 @@ export default class MoveView extends PureComponent {
       onPanResponderRelease: this._handlePanResponderEnd,
       onPanResponderTerminate: this._handlePanResponderEnd,
     });
-    const {style} = this.props;
+    const {style = {}} = this.props;
     this._previousTop = style.top || 0;
     this._previousLeft = style.left || 0;
 

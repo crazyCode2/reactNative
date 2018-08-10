@@ -1,24 +1,25 @@
 /**
- * 加载中 视图组件
+ * 加载视图
  */
 import React, {Component} from 'react';
 import {
   StyleSheet,
   View
 } from 'react-native';
-import Spinkit from 'react-native-spinkit';
+// import Spinkit from 'react-native-spinkit';
 
 export class LoadingView extends Component {
   render() {
     return (
       <View style={style.container}>
         <View style={style.loadingContainer}>
-          <Spinkit size={70} type={'9CubeGrid'}/>
+          {/*<Spinkit size={70} type={'9CubeGrid'}/>*/}
         </View>
       </View>
     );
   }
 }
+
 
 const style = StyleSheet.create({
   container: {

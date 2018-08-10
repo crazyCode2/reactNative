@@ -8,13 +8,14 @@ import {
   Text,
   Button
 } from 'react-native';
-import {inject, observer} from 'mobx-react'
-import {RouteHelper} from 'react-navigation-easy-helper'
-import {BaseContainer} from "../components";
+import { inject, observer } from 'mobx-react';
+import { RouteHelper } from 'react-navigation-easy-helper';
+import { BaseContainer } from '../../components';
 
 @inject('userStore')
 @observer
 export default class LoginPage extends Component {
+
   static navigationOptions = ({navigation}) => ({
     headerTitle: 'LoginPage',
   });
@@ -50,7 +51,6 @@ export default class LoginPage extends Component {
         <Button onPress={() => {
           this.props.navigation.navigate('LaunchPage')
         }} title={'返回上一页'}/>
-
       </BaseContainer>
     );
   }

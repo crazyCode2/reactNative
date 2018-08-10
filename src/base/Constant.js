@@ -1,7 +1,54 @@
 /**
- * 保存一些常量
+ * 常数(常量)
  */
- 
+import { Platform, NativeModules } from 'react-native';
+import { getBuildNumber, getVersion } from 'react-native-device-info';
+//从原生导出常量
+const nativeConstant = NativeModules.nativeConstant;
+//构建类型
+const BUILD_TYPE = nativeConstant.BUILD_TYPES;
+
+const debug = {
+  TEST_TITLE: 'debug模式',
+  TYPE: 'debug',
+  CODE_PUSH_KEY: Platform.OS === 'ios' ?
+    'GJf_gAWqYPwRg_jzh5YtT5qXWrwO06deade4-1f87-4d67-b199-fbf216d3f314' :
+    'mENSa_WNjzP6HOMmq9ECK8lEr8qQ06deade4-1f87-4d67-b199-fbf216d3f314'
+};
+
+const staging = {
+  TEST_TITLE: 'staging模式',
+  TYPE: 'staging',
+  CODE_PUSH_KEY: Platform.OS === 'ios' ?
+    'GJf_gAWqYPwRg_jzh5YtT5qXWrwO06deade4-1f87-4d67-b199-fbf216d3f314' :
+    'mENSa_WNjzP6HOMmq9ECK8lEr8qQ06deade4-1f87-4d67-b199-fbf216d3f314'
+};
+
+const release = {
+  TEST_TITLE: 'release模式',
+  TYPE: 'release',
+  CODE_PUSH_KEY: Platform.OS === 'ios' ?
+    'gm-Zizg975oJztUDW4sgymi6_jm_06deade4-1f87-4d67-b199-fbf216d3f314' :
+    'aSqHmmeAAa9an1VvrRjoA4vXkptm06deade4-1f87-4d67-b199-fbf216d3f314'
+};
+
+const common = {
+  BUILD_TYPE: BUILD_TYPE,
+  VERSION: getVersion(),
+  BUILD_NUMBER: getBuildNumber(),
+  //是否是测试模式
+  _STAGING_: BUILD_TYPE === 'STAGING',
+  //是否是正式模式
+  _RELEASE_: BUILD_TYPE === 'RELEASE',
+};
+
+const divisive = __DEV__ ? debug : (common._STAGING_ ? staging : release);
+export default {
+  ...common,
+  ...divisive
+}
+
+
 //网易新闻最新新闻列表
 export const WANGYINEWS = {
   url: 'https://c.m.163.com/recommend/getSubDocPic',

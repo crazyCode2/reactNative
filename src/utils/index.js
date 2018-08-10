@@ -1,9 +1,5 @@
 /**
- * 工具类 主文件
+ * 工具类
  */
-export {CommonUtils, px2dp} from './CommonUtils';
-export {LoadingUtils} from './LoadingUtils';
-export {ColorUtils} from './ColorUtils';
-export {StringUtils} from './StringUtils';
-export {HttpUtil, ImageBody} from './HttpUtil';
+// 添加组件的的自定义属性
 export {addCustomProps} from './addCustomProps';

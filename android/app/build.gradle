@@ -77,6 +77,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -103,6 +104,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [
+                JPUSH_APPKEY: "54bb5c617ac8dd3d9b01a42c",
+                APP_CHANNEL : "default"
+        ]
+
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -137,16 +143,15 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-svg')
     compile project(':react-native-splash-screen')
-    compile project(':react-native-http-cache')
     compile project(':react-native-device-info')
+    compile project(':react-native-code-push')
+    compile project(':jpush-react-native')
+    compile project(':jcore-react-native')
+    compile project(':jpush-react-native')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     compile "com.facebook.react:react-native:+"  // From node_modules
-    compile project(':react-native-video')
-    compile project(':react-native-vector-icons')
-    compile project(':react-native-image-picker')
 }
 
 // Run this once to be able to run the application with BUCK

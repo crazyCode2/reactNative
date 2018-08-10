@@ -1,7 +1,7 @@
 /**
- * 网络异常页面
+ * 错误视图
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
@@ -26,6 +26,7 @@ export class ErrorView extends Component {
 
   render() {
     const {onPress, btnStyle, errorText, btnTitle, textStyle} = this.props;
+    
     return <View style={styles.container}>
       <View style={styles.errorContainer}>
         <Text style={textStyle}>{errorText}</Text>

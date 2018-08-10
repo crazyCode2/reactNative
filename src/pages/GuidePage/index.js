@@ -12,10 +12,12 @@ import { Carousel, Button } from 'teaset';
 import { observer } from 'mobx-react';
 import { action, observable } from 'mobx';
 import { RouteHelper } from 'react-navigation-easy-helper';
-import { Theme } from '../store';
+// 主题
+import { Theme } from '../../store';
 
 @observer
 export default class GuidePage extends Component {
+
   static navigationOptions = {
     header: null
   };
@@ -25,7 +27,6 @@ export default class GuidePage extends Component {
 
   @observable isShow = false;
 
-
   @action setShow(show) {
     this.isShow = show
   }
@@ -33,7 +34,6 @@ export default class GuidePage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar hidden={true}/>
         <Carousel
           control={
             <Carousel.Control
@@ -50,21 +50,28 @@ export default class GuidePage extends Component {
           }}>
           {this.list.map(item => <Text style={{fontSize: 30}} key={item}>{item}</Text>)}
         </Carousel>
-        {this.isShow ? <Button
-          style={{
-            position: 'absolute',
-            backgroundColor: Theme.baseColor,
-            top: SCREEN_HEIGHT - 60,
-            width: 120,
-            alignSelf: 'center',
-            height: 35,
-            borderColor: Theme.baseColor
-          }}
-          title={'立即体验'}
-          titleStyle={{color: 'white'}}
-          onPress={() => {
-            RouteHelper.reset('MainPage')
-          }}/> : null}
+        {
+          this.isShow 
+          ? 
+          <Button
+            style={{
+              position: 'absolute',
+              backgroundColor: Theme.baseColor,
+              top: SCREEN_HEIGHT - 60,
+              width: 120,
+              alignSelf: 'center',
+              height: 35,
+              borderColor: Theme.baseColor
+            }}
+            title={'立即体验'}
+            titleStyle={{color: 'white'}}
+            onPress={() => {
+              RouteHelper.reset('MainPage')
+            }}
+          /> 
+          :
+          null
+        }
       </View>
     );
   }

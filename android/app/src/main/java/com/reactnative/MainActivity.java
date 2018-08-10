@@ -1,6 +1,10 @@
 package com.reactnative;
 
 import com.facebook.react.ReactActivity;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.microsoft.codepush.react.CodePush;
+import cn.jpush.reactnativejpush.JPushPackage;
 
 public class MainActivity extends ReactActivity {
 

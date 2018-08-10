@@ -1,7 +1,7 @@
 /**
- * 基础内容部分 组件
+ * 主体布局
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   StyleSheet
@@ -9,9 +9,12 @@ import {
 
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import { LoadingView } from "./LoadingView";
-import { ErrorView } from "./ErrorView";
-import NavBar from './NavBar'
+// 加载视图
+import { LoadingView } from '../LoadingView';
+// 错误视图
+import { ErrorView } from '../ErrorView';
+// 导航视图
+import NavBar from '../NavBar';
 
 @observer
 export default class BaseContainer extends Component {
@@ -66,7 +69,6 @@ export default class BaseContainer extends Component {
     </View>
   }
 }
-
 const styles = StyleSheet.create({
   container: {flex: 1}
 });

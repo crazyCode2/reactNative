@@ -1,8 +1,11 @@
 /**
- * 基础数据
+ * 基础应用数据
  */
-import {UserStore} from './UserStore'
-import {ShopCarStore} from './ShopCarStore'
+// 用户数据
+import {UserStore} from './UserStore';
+// 购物车数据
+import {ShopCarStore} from './ShopCarStore';
+
 
 export class BaseAppStore {
   userStore: UserStore;

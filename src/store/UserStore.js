@@ -1,7 +1,7 @@
 /**
- * 用户 数据
+ * 用户数据
  */
-import {observable, computed, action, autorun} from 'mobx'
+import { observable, computed, action, autorun } from 'mobx'
 
 export class UserStore {
   @observable
