@@ -66,7 +66,7 @@ export default class GuidePage extends Component {
             title={'立即体验'}
             titleStyle={{color: 'white'}}
             onPress={() => {
-              RouteHelper.reset('MainPage')
+              RouteHelper.navigate('MainPage')
             }}
           /> 
           :
