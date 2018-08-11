@@ -2,7 +2,8 @@
  * 常数(常量)
  */
 import { Platform, NativeModules } from 'react-native';
-import { getBuildNumber, getVersion } from 'react-native-device-info';
+// 获取设备信息
+// import { getBuildNumber, getVersion } from 'react-native-device-info';
 //从原生导出常量
 const nativeConstant = NativeModules.nativeConstant;
 //构建类型
@@ -34,8 +35,8 @@ const release = {
 
 const common = {
   BUILD_TYPE: BUILD_TYPE,
-  VERSION: getVersion(),
-  BUILD_NUMBER: getBuildNumber(),
+  // VERSION: getVersion(), // 获取 版本
+  // BUILD_NUMBER: getBuildNumber(), // 获取 应用编译版本号
   //是否是测试模式
   _STAGING_: BUILD_TYPE === 'STAGING',
   //是否是正式模式

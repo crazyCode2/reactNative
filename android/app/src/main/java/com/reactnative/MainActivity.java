@@ -1,10 +1,8 @@
 package com.reactnative;
 
+import android.os.Bundle; // add
 import com.facebook.react.ReactActivity;
-import org.devio.rn.splashscreen.SplashScreenReactPackage;
-import com.learnium.RNDeviceInfo.RNDeviceInfo;
-import com.microsoft.codepush.react.CodePush;
-import cn.jpush.reactnativejpush.JPushPackage;
+import org.devio.rn.splashscreen.SplashScreen; // add
 
 public class MainActivity extends ReactActivity {
 
@@ -15,5 +13,12 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "reactNative";
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        // SplashScreen.show(this);   //add
+        SplashScreen.show(this,true);   //add
+        super.onCreate(savedInstanceState);
     }
 }

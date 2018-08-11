@@ -16,6 +16,7 @@ import { observer } from 'mobx-react';
 import { Theme } from '../../store';
 // 图片资源
 import { images } from '../../res';
+// 阴影视图
 import ShadowView from 'react-native-shadow-view';
 
 const { width } = Dimensions.get('window');

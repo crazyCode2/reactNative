@@ -6,10 +6,11 @@ import { AppNavigator } from './src/AppNav';
 import { Provider } from 'mobx-react';
 import { BaseAppStore } from './src/store/index';
 import { RouteHelper } from 'react-navigation-easy-helper';
-import codePush from 'react-native-code-push';
+// import codePush from 'react-native-code-push';
 import MoveView from './src/components/MoveView';
 import { Platform, StatusBar, Text, TouchableOpacity, View } from 'react-native';
-import JPushModule from 'jpush-react-native';
+// 极光推送
+// import JPushModule from 'jpush-react-native';
 import { Toast } from 'teaset';
 
 const store = new BaseAppStore();
@@ -28,7 +29,7 @@ RouteHelper.routeInterceptor = (routeName, params) => {
   return true
 };
 
-@codePush
+// @codePush
 export default class App extends Component<Props> {
   // 构造函数
   constructor(props) {
@@ -38,32 +39,32 @@ export default class App extends Component<Props> {
     }
   }
 
-  componentDidMount() {
-    if (Platform.OS === 'android') {
-      StatusBar.setTranslucent(true);
-      StatusBar.setBackgroundColor('transparent');
-      JPushModule.notifyJSDidLoad(res => console.log(res));
-    }
-    JPushModule.getRegistrationID(registrationId => {
-      console.log('registrationId', registrationId);
-      Toast.message(registrationId);
-    });
-    this.notificationListener = event => {
-      console.log('addReceiveNotificationListener', event);
-      alert(`Notification:${JSON.stringify(event)}`);
-    };
-    JPushModule.addReceiveNotificationListener(this.notificationListener);
-    this.customMsgListener = event => {
-      console.log('addReceiveCustomMsgListener', event);
-      alert(`Custom:${JSON.stringify(event)}`);
-    };
-    JPushModule.addReceiveCustomMsgListener(this.customMsgListener);
-  }
+  // componentDidMount() {
+  //   if (Platform.OS === 'android') {
+  //     StatusBar.setTranslucent(true);
+  //     StatusBar.setBackgroundColor('transparent');
+  //     JPushModule.notifyJSDidLoad(res => console.log(res));
+  //   }
+  //   JPushModule.getRegistrationID(registrationId => {
+  //     console.log('registrationId', registrationId);
+  //     Toast.message(registrationId);
+  //   });
+  //   this.notificationListener = event => {
+  //     console.log('addReceiveNotificationListener', event);
+  //     alert(`Notification:${JSON.stringify(event)}`);
+  //   };
+  //   JPushModule.addReceiveNotificationListener(this.notificationListener);
+  //   this.customMsgListener = event => {
+  //     console.log('addReceiveCustomMsgListener', event);
+  //     alert(`Custom:${JSON.stringify(event)}`);
+  //   };
+  //   JPushModule.addReceiveCustomMsgListener(this.customMsgListener);
+  // }
 
-  componentWillUnmount() {
-    JPushModule.removeReceiveCustomMsgListener(this.customMsgListener);
-    JPushModule.removeReceiveNotificationListener(this.notificationListener);
-  }
+  // componentWillUnmount() {
+  //   JPushModule.removeReceiveCustomMsgListener(this.customMsgListener);
+  //   JPushModule.removeReceiveNotificationListener(this.notificationListener);
+  // }
 
   render() {
     return <Provider {...store}>

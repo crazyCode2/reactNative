@@ -2,8 +2,11 @@
  * 更新 工具类
  */
 import { Platform, Alert } from 'react-native';
+// 热更新
 import CodePush from 'react-native-code-push';
+// 常量
 import C from '../base/Constant';
+// 版本升级
 import { upgrade, openAPPStore } from 'react-native-app-upgrade';
 
 /**

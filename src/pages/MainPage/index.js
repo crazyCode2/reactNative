@@ -17,7 +17,8 @@ import ShopCarPage from './ShopCarPage';
 // 我的
 import MinePage from './MinePage';
 import { images } from '../../res';
-import { checkNativeUpdate } from '../../utils/UpdateUtils';
+// 检测版本升级
+// import { checkNativeUpdate } from '../../utils/UpdateUtils';
 
 const titles = ['首页', '购物车', '我的'];
 
@@ -37,7 +38,7 @@ export default class MainPage extends Component {
 
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.onBackHander);
-    checkNativeUpdate()
+    // checkNativeUpdate()
   }
 
   componentWillUnmount() {

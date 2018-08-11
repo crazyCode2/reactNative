@@ -12,7 +12,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { RouteHelper } from 'react-navigation-easy-helper';
 // 主体布局
 import { BaseContainer } from '../../components';
-// 常数
+// 常数(常量)
 import Config from '../../base/Constant';
 
 export default class LaunchPage extends Component {
