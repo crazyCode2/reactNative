@@ -67,24 +67,26 @@ export default class App extends Component<Props> {
   // }
 
   render() {
-    return <Provider {...store}>
-      <View style={{flex: 1}}>
-        <AppNavigator/>
-        <MoveView style={{top: SCREEN_HEIGHT - 140, left: SCREEN_WIDTH - 120}}>
-          <TouchableOpacity
-            onPress={() => alert('')}
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: 40,
-              backgroundColor: '#0008',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-            <Text style={{color: 'white'}}>悬浮窗口</Text>
-          </TouchableOpacity>
-        </MoveView>
-      </View>
-    </Provider>
+    return (
+      <Provider {...store}>
+        <View style={{flex: 1}}>
+          <AppNavigator/>
+          <MoveView style={{top: SCREEN_HEIGHT - 140, left: SCREEN_WIDTH - 120}}>
+            <TouchableOpacity
+              onPress={() => alert('')}
+              style={{
+                width: 80,
+                height: 80,
+                borderRadius: 40,
+                backgroundColor: '#0008',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+              <Text style={{color: 'white'}}>悬浮窗口</Text>
+            </TouchableOpacity>
+          </MoveView>
+        </View>
+      </Provider>
+    );
   }
 }

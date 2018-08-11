@@ -12,7 +12,7 @@ import LoginPage from './pages/LoginPage';
 // 主页面
 import MainPage from './pages/MainPage';
 // 测试页
-import TeasetApp from '../node_modules/teaset/example/App';
+// import TeasetApp from '../node_modules/teaset/example/App';
 
 export const AppNavigator = StackNavigator(
   configRoute({
@@ -20,11 +20,11 @@ export const AppNavigator = StackNavigator(
     LaunchPage: {screen: LaunchPage}, // 启动页
     LoginPage: {screen: LoginPage}, // 登录页
     MainPage: {screen: MainPage}, // 主页面
-    TeasetApp: {
-      screen: TeasetApp, navigationOptions: {
-        header: null
-      }
-    },
+    // TeasetApp: {
+    //   screen: TeasetApp, navigationOptions: {
+    //     header: null
+    //   }
+    // },
   }), {
     initialRouteName: 'LaunchPage', // 默认启动页
     navigationOptions: {

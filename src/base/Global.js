@@ -3,7 +3,7 @@
  */
 import {Dimensions, Platform} from 'react-native'
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 global.SCREEN_WIDTH = width;
 global.SCREEN_HEIGHT = height;
 global._IOS_ = Platform.OS === 'ios';
