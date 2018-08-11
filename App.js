@@ -6,8 +6,10 @@ import { AppNavigator } from './src/AppNav';
 import { Provider } from 'mobx-react';
 import { BaseAppStore } from './src/store/index';
 import { RouteHelper } from 'react-navigation-easy-helper';
+// 热更新
 // import codePush from 'react-native-code-push';
-import MoveView from './src/components/MoveView';
+// 悬浮窗口
+// import MoveView from './src/components/MoveView';
 import { Platform, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 // 极光推送
 // import JPushModule from 'jpush-react-native';
@@ -71,20 +73,6 @@ export default class App extends Component<Props> {
       <Provider {...store}>
         <View style={{flex: 1}}>
           <AppNavigator/>
-          <MoveView style={{top: SCREEN_HEIGHT - 140, left: SCREEN_WIDTH - 120}}>
-            <TouchableOpacity
-              onPress={() => alert('')}
-              style={{
-                width: 80,
-                height: 80,
-                borderRadius: 40,
-                backgroundColor: '#0008',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-              <Text style={{color: 'white'}}>悬浮窗口</Text>
-            </TouchableOpacity>
-          </MoveView>
         </View>
       </Provider>
     );

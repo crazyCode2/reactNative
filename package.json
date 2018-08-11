@@ -1,5 +1,5 @@
 {
-  "name": "reactNative",
+  "name": "Example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "lodash": "^4.17.10",
     "mobx": "4.3.1",
     "mobx-react": "5.1.0",
     "prop-types": "^15.6.2",

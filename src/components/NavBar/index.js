@@ -17,7 +17,7 @@ import { Theme } from '../../store';
 // 图片资源
 import { images } from '../../res';
 // 阴影视图
-import ShadowView from 'react-native-shadow-view';
+// import ShadowView from 'react-native-shadow-view';
 
 const { width } = Dimensions.get('window');
 
@@ -68,7 +68,8 @@ export default class NavBar extends Component {
 
     const {navigation} = this.context;
 
-    const ContainView = hasShadow ? ShadowView : View;
+    // const ContainView = hasShadow ? ShadowView : View;
+    const ContainView = hasShadow ? View : View;
 
     let leftViewPress = null;
     if (typeof leftPress === 'undefined') {

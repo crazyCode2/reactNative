@@ -4,10 +4,12 @@
 import { Platform, NativeModules } from 'react-native';
 // 获取设备信息
 // import { getBuildNumber, getVersion } from 'react-native-device-info';
-//从原生导出常量
-const nativeConstant = NativeModules.nativeConstant;
-//构建类型
-const BUILD_TYPE = nativeConstant.BUILD_TYPES;
+// //从原生导出常量
+// const nativeConstant = NativeModules.nativeConstant;
+// //构建类型
+// const BUILD_TYPE = nativeConstant.BUILD_TYPES;
+
+const BUILD_TYPE = 'STAGING';
 
 const debug = {
   TEST_TITLE: 'debug模式',
