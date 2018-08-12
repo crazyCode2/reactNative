@@ -19,22 +19,22 @@ import NavBar from '../NavBar';
 @observer
 export default class BaseContainer extends Component {
   static propTypes = {
-    store: PropTypes.object,
-    onErrorPress: PropTypes.func,
-    navBar: PropTypes.element,
+    store: PropTypes.object, // 数据
+    onErrorPress: PropTypes.func, // 错误的点击事件
+    navBar: PropTypes.element, // 导航栏
 
-    title: PropTypes.string,
-    hideLeft: PropTypes.bool,
-    leftPress: PropTypes.func,
-    leftTitle: PropTypes.string,
-    leftView: PropTypes.element,
-    leftIcon: PropTypes.any,
-    hideRight: PropTypes.bool,
-    rightPress: PropTypes.func,
-    rightView: PropTypes.element,
-    rightIcon: PropTypes.any,
-    rightTitle: PropTypes.string,
-    hasShadow: PropTypes.bool
+    title: PropTypes.string, // 中间标题
+    hideLeft: PropTypes.bool, // 隐藏/显示左侧
+    leftPress: PropTypes.func, // 左侧点击事件
+    leftTitle: PropTypes.string, // 左侧标题
+    leftView: PropTypes.element, // 左侧视图
+    leftIcon: PropTypes.any, // 左侧图标
+    hideRight: PropTypes.bool, // 隐藏/显示右侧
+    rightPress: PropTypes.func, // 右侧点击事件
+    rightView: PropTypes.element, // 右侧视图
+    rightIcon: PropTypes.any, // 右侧图标
+    rightTitle: PropTypes.string, // 右侧标题
+    hasShadow: PropTypes.bool // 是否有阴影
   };
 
   defaultPress = () => {

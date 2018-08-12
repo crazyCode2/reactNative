@@ -16,6 +16,7 @@ import HomePage from './HomePage';
 import ShopCarPage from './ShopCarPage';
 // 我的
 import MinePage from './MinePage';
+// 图片资源
 import { images } from '../../res';
 // 检测版本升级
 // import { checkNativeUpdate } from '../../utils/UpdateUtils';

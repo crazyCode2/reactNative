@@ -1,5 +1,5 @@
 /**
- * 我的
+ * 首页--详情页
  */
 import React, {Component} from 'react';
 import {
@@ -8,13 +8,14 @@ import {
   View,
 } from 'react-native';
 import { BaseContainer } from '../../../components';
+// import { RouteHelper } from 'react-navigation-easy-helper';
 
-export default class MinePage extends Component {
+export default class HomeDetailPage extends Component {
   render() {
     return (
       <BaseContainer
-        hideLeft
-        title={'我的'}
+        leftPress={() => this.props.navigation.goBack()}
+        title={'详情页'}
       >
       </BaseContainer>
     )

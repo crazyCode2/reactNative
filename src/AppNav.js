@@ -11,6 +11,8 @@ import LaunchPage from './pages/LaunchPage';
 import LoginPage from './pages/LoginPage';
 // 主页面
 import MainPage from './pages/MainPage';
+// 首页--详情页
+import HomeDetailPage from './pages/MainPage/HomePage/HomeDetailPage';
 // 测试页
 import TeasetApp from '../node_modules/teaset/example/App';
 
@@ -20,6 +22,7 @@ export const AppNavigator = createStackNavigator (
     LaunchPage: {screen: LaunchPage}, // 启动页
     LoginPage: {screen: LoginPage}, // 登录页
     MainPage: {screen: MainPage}, // 主页面
+    HomeDetailPage: {screen: HomeDetailPage}, // 首页--详情页
     TeasetApp: {
       screen: TeasetApp, navigationOptions: {
         header: null

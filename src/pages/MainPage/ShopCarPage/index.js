@@ -7,13 +7,16 @@ import {
   Text,
   View,
 } from 'react-native';
+import { BaseContainer } from '../../../components';
 
 export default class ShopCarPage extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>购物车</Text>
-      </View>
+      <BaseContainer
+        hideLeft
+        title={'购物车'}
+      >
+      </BaseContainer>
     )
   }
 }

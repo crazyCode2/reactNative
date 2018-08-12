@@ -7,6 +7,7 @@ import {
   Text,
   ScrollView
 } from 'react-native';
+import { RouteHelper } from 'react-navigation-easy-helper';
 import ListRow from 'teaset/components/ListRow/ListRow';
 import { NewsStore } from '../../../store/NewsStore.js';
 import { toJS } from 'mobx';
@@ -18,9 +19,18 @@ export default class HomePage extends Component {
 
   store = new NewsStore();
 
+  // 跳转详情页
+
+
   render() {
     return (
-      <BaseContainer store={this.store} hideLeft title={'首页'} rightTitle={'详情'}>
+      <BaseContainer
+        store={this.store}
+        hideLeft
+        title={'首页'}
+        rightTitle={'详情'}
+        rightPress={() => RouteHelper.navigate('HomeDetailPage')}
+      >
         <ScrollView style={styles.container} stickyHeaderIndices={[0]}>
           <ListRow
             title={'重新刷新'}
