@@ -37,6 +37,7 @@ export class LoadingUtils {
             borderRadius: 10
           }}>
             {/*<Spinkit color={'#fff'} type={type}/>*/}
+            <ActivityIndicator />
             <Text style={{color: 'white', fontSize: 17}}>{hint}</Text>
           </View>
         </TouchableWithoutFeedback>;

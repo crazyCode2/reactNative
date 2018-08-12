@@ -47,7 +47,8 @@ export default class NavBar extends Component {
   };
 
   static contextTypes = {
-    navigation: PropTypes.object.isRequired,
+    // navigation: PropTypes.object.isRequired,
+    navigation: PropTypes.object
   };
 
   render() {

@@ -20,9 +20,10 @@ export default class LoginPage extends Component {
     headerTitle: 'LoginPage',
   });
 
+  // 登录操作
   _login = () => {
-    const {userStore, navigation} = this.props;
-    const {routeName, params, successCallBack} = navigation.state.params;
+    const { userStore, navigation } = this.props;
+    const { routeName, params, successCallBack } = navigation.state.params;
     userStore.login({
       account: '157xxxxxxxx',
       password: '111111',
@@ -42,15 +43,24 @@ export default class LoginPage extends Component {
     })
   };
 
+  // 注册操作
+  _register = () => {
+    alert('注册');
+  }
+
   render() {
     return (
-      <BaseContainer title={'LoginPage'} rightTitle={'注册'} rightPress={alert}>
-        <Text>登录页面</Text>
+      <BaseContainer
+        hideLeft
+        title={'登录页'}
+        rightTitle={'注册'}
+        rightPress={this._register}
+      >
         <Button onPress={this._login} title={'登录'}/>
 
         <Button onPress={() => {
           this.props.navigation.navigate('LaunchPage')
-        }} title={'返回上一页'}/>
+        }} title={'跳转启动页'}/>
       </BaseContainer>
     );
   }

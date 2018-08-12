@@ -1,6 +1,7 @@
 /**
  * 基础页面数据
  */
+// observable 是一种让数据的变化可以被观察的方法
 import { observable, action } from 'mobx';
 
 /**

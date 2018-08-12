@@ -7,6 +7,10 @@ import {
   View,
   ToastAndroid
 } from 'react-native';
+/**
+ * @inject 注入需要的store
+ * @observer 修饰react组件类
+ */
 import { inject, observer } from 'mobx-react';
 import { RouteHelper } from 'react-navigation-easy-helper';
 import { TabView, Button } from 'teaset';

@@ -4,16 +4,18 @@
 import React, {Component} from 'react';
 import {
   StyleSheet,
-  View
+  View,
+  ActivityIndicator,
 } from 'react-native';
 // import Spinkit from 'react-native-spinkit';
 
 export class LoadingView extends Component {
   render() {
     return (
-      <View style={style.container}>
-        <View style={style.loadingContainer}>
+      <View style={styles.container}>
+        <View style={styles.loadingContainer}>
           {/*<Spinkit size={70} type={'9CubeGrid'}/>*/}
+          <ActivityIndicator style={styles.loading} />
         </View>
       </View>
     );
@@ -21,7 +23,7 @@ export class LoadingView extends Component {
 }
 
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
@@ -31,5 +33,8 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  loading: {
+    marginVertical: 20
   }
 });
