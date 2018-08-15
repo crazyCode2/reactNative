@@ -8,11 +8,18 @@ import {
   Text,
   Button
 } from 'react-native';
+import { ListRow, Input } from 'teaset';
+/**
+ * @inject 注入需要的store
+ * @observer 修饰react组件类
+ */
 import { inject, observer } from 'mobx-react';
 import { RouteHelper } from 'react-navigation-easy-helper';
 import { BaseContainer } from '../../components';
 
+// @inject 注入需要的store
 @inject('userStore')
+// @observer 修饰react组件类
 @observer
 export default class LoginPage extends Component {
 
@@ -20,32 +27,42 @@ export default class LoginPage extends Component {
     headerTitle: 'LoginPage',
   });
 
+  state = {
+    account: '', // 用户名
+    password: '' // 密码
+  }
+
   // 登录操作
   _login = () => {
     const { userStore, navigation } = this.props;
-    const { routeName, params, successCallBack } = navigation.state.params;
-    userStore.login({
-      account: '157xxxxxxxx',
-      password: '111111',
-      store: this.store,
-      type: 'account',
-      callBack: () => {
-        if (userStore.isLogin) {
-          if (routeName) {
-            RouteHelper.replace(routeName, params)
-          }
-          if (successCallBack) {
-            RouteHelper.goBack();
-            successCallBack();
-          }
-        }
-      }
-    })
+    // const { routeName, params, successCallBack } = navigation.state.params;
+
+    console.log(userStore);
+    console.log(navigation);
+    console.log(this.store);
+
+    // userStore.login({
+    //   account: '157xxxxxxxx',
+    //   password: '111111',
+    //   store: this.store,
+    //   type: 'account',
+    //   callBack: () => {
+    //     if (userStore.isLogin) {
+    //       if (routeName) {
+    //         RouteHelper.replace(routeName, params)
+    //       }
+    //       if (successCallBack) {
+    //         RouteHelper.goBack();
+    //         successCallBack();
+    //       }
+    //     }
+    //   }
+    // });
   };
 
   // 注册操作
   _register = () => {
-    alert('注册');
+    this.props.navigation.navigate('LaunchPage')
   }
 
   render() {
@@ -56,11 +73,34 @@ export default class LoginPage extends Component {
         rightTitle={'注册'}
         rightPress={this._register}
       >
-        <Button onPress={this._login} title={'登录'}/>
+        {/*用户名*/}
+        <ListRow title='用户名' detail={
+          <Input
+            style={{width: 200}}
+            value={this.state.account}
+            placeholder='用户名'
+            onChangeText={text => 
+              this.setState({account: text})
+            }
+          />
+        } topSeparator='full' />
+        {/*密码*/}
+        <ListRow title='密码' detail={
+          <Input
+            style={{width: 200}}
+            value={this.state.password}
+            placeholder='密码'
+            onChangeText={text => 
+              this.setState({password: text})
+            }
+          />
+        } topSeparator='full' />
+        {/*登录*/}
+        <Button onPress={this._login} title={'登录'} />
 
-        <Button onPress={() => {
+        {/*<Button onPress={() => {
           this.props.navigation.navigate('LaunchPage')
-        }} title={'跳转启动页'}/>
+        }} title={'跳转启动页'}/>*/}
       </BaseContainer>
     );
   }

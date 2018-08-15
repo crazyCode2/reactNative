@@ -29,7 +29,7 @@ export const AppNavigator = createStackNavigator (
       }
     },
   }), {
-    initialRouteName: 'LaunchPage', // 默认启动页
+    initialRouteName: 'LoginPage', // 默认启动页
     navigationOptions: {
       header: null
     }
