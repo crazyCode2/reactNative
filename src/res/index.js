@@ -13,7 +13,7 @@ export const images = {
   sand: require('./image/sand.png'),
   error: require('./image/error.png'),
   // 引导页 图片
-  s1: require('./image/guide/s1.jpg'),
-  s2: require('./image/guide/s2.jpg'),
-  s3: require('./image/guide/s3.jpg'),
+  swiper_1: require('./image/guide/swiper_1.jpg'),
+  swiper_2: require('./image/guide/swiper_2.jpg'),
+  swiper_3: require('./image/guide/swiper_3.jpg'),
 };

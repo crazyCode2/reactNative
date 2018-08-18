@@ -26,7 +26,7 @@ export default class GuidePage extends Component {
   };
 
   //引导页数据,替换成项目图片
-  list = [images.s1, images.s2,images.s3];
+  list = [images.swiper_1, images.swiper_2,images.swiper_3];
 
   @observable isShow = false;
 
