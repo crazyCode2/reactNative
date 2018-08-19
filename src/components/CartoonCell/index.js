@@ -7,32 +7,53 @@ import {
   Image,
   Text,
   View,
+  TouchableOpacity,
 } from 'react-native';
+// 引入路由
+import { RouteHelper } from 'react-navigation-easy-helper';
 
 export default class CartoonCell extends Component {
+  // 跳转详情页
+  goDetailPage = (id) => {
+    RouteHelper.navigate('MineDetailPage',{id: id});
+  }
+
   render() {
+    const { row } = this.props;
     return (
-      <View style={styles.cell}>
-        <Image
-          style={styles.image}
-          source={{uri: this.props.cover}}
-          alt=''
-        />
-        <Text style={styles.title}>{this.props.title}</Text>
-      </View>
+      <TouchableOpacity
+        activeOpacity={0.5}
+        onPress={()=> this.goDetailPage(row.id)}
+        style={styles.itemContainer}
+      >
+        <View style={{width: '100%',height: 170}}>
+          <Image
+            style={styles.image}
+            source={{uri: row.cover}}
+            alt=''
+          />
+          <Text
+            // 该属性的值是一个数字，用于规定最多显示多少行，如果超过该数值，则以省略号（...）表示。
+            numberOfLines={1}
+            style={styles.title}
+          >{row.title}</Text>
+        </View>
+      </TouchableOpacity>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  cell: {
+  itemContainer: {
     paddingLeft: 5,
     paddingRight: 5,
     marginLeft: 0,
     marginRight: 0,
     width: '33.3333333333%',
     height: 170,
-    alignSelf:'flex-start'
+    // 从左到右排列
+    alignSelf:'flex-start',
+    backgroundColor: '#fff'
   },
   image: {
     flex: 1,
