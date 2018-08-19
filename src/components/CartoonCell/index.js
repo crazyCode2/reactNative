@@ -13,9 +13,9 @@ import {
 import { RouteHelper } from 'react-navigation-easy-helper';
 
 export default class CartoonCell extends Component {
-  // 跳转详情页
-  goDetailPage = (id) => {
-    RouteHelper.navigate('MineDetailPage',{id: id});
+  // 跳转目录页
+  goCatalogPage = (id,title) => {
+    RouteHelper.navigate('MineCatalogPage',{id: id,title: title});
   }
 
   render() {
@@ -23,7 +23,7 @@ export default class CartoonCell extends Component {
     return (
       <TouchableOpacity
         activeOpacity={0.5}
-        onPress={()=> this.goDetailPage(row.id)}
+        onPress={()=> this.goCatalogPage(row.id,row.title)}
         style={styles.itemContainer}
       >
         <View style={{width: '100%',height: 170}}>

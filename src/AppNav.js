@@ -15,6 +15,8 @@ import MainPage from './pages/MainPage';
 import HomeDetailPage from './pages/MainPage/HomePage/HomeDetailPage';
 // 我的--列表页
 import MineListPage from './pages/MainPage/MinePage/MineListPage';
+// 我的--目录页
+import MineCatalogPage from './pages/MainPage/MinePage/MineCatalogPage';
 // 我的--详情页
 import MineDetailPage from './pages/MainPage/MinePage/MineDetailPage';
 // 测试页
@@ -28,6 +30,7 @@ export const AppNavigator = createStackNavigator (
     MainPage: {screen: MainPage}, // 主页面
     HomeDetailPage: {screen: HomeDetailPage}, // 首页--详情页
     MineListPage: {screen: MineListPage}, // 我的--列表页
+    MineCatalogPage: {screen: MineCatalogPage}, // 我的--目录页
     MineDetailPage: {screen: MineDetailPage}, // 我的--详情页
     TeasetApp: {
       screen: TeasetApp, navigationOptions: {

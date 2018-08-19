@@ -75,10 +75,22 @@ export const WANGYINEWS = {
   }
 };
 
-// 网易漫画
+// 网易漫画列表
 export const WANGYICARTOON = {
   url: 'https://h5.manhua.163.com/category/',
   params: {
     page: 1
   }
+};
+
+// 网易漫画目录
+export const WANGYICARTOONCATALOG = {
+  url: 'https://h5.manhua.163.com/book/catalog/',
+  params: {}
+};
+
+// 网易漫画详情
+export const WANGYICARTOONDETAIL = {
+  url: 'https://h5.manhua.163.com/reader/section/',
+  params: {}
 };
