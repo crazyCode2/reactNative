@@ -13,6 +13,8 @@ import LoginPage from './pages/LoginPage';
 import MainPage from './pages/MainPage';
 // 首页--详情页
 import HomeDetailPage from './pages/MainPage/HomePage/HomeDetailPage';
+// 我的--详情页
+import MineDetailPage from './pages/MainPage/MinePage/MineDetailPage.js';
 // 测试页
 import TeasetApp from '../node_modules/teaset/example/App';
 
@@ -23,13 +25,14 @@ export const AppNavigator = createStackNavigator (
     LoginPage: {screen: LoginPage}, // 登录页
     MainPage: {screen: MainPage}, // 主页面
     HomeDetailPage: {screen: HomeDetailPage}, // 首页--详情页
+    MineDetailPage: {screen: MineDetailPage}, // 我的--详情页
     TeasetApp: {
       screen: TeasetApp, navigationOptions: {
         header: null
       }
     },
   }), {
-    initialRouteName: 'LoginPage', // 默认启动页
+    initialRouteName: 'MainPage', // 默认启动页
     navigationOptions: {
       header: null
     }

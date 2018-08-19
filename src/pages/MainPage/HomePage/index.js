@@ -17,11 +17,8 @@ import { observer } from 'mobx-react';
 
 @observer
 export default class HomePage extends Component {
-
+  // 新闻列表
   store = new NewsStore();
-
-  // 跳转详情页
-
 
   render() {
     return (

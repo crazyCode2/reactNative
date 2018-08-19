@@ -74,3 +74,11 @@ export const WANGYINEWS = {
     spestr: 'shortnews'
   }
 };
+
+// 网易漫画
+export const WANGYICARTOON = {
+  url: 'https://h5.manhua.163.com/category/',
+  params: {
+    page: 1
+  }
+};
