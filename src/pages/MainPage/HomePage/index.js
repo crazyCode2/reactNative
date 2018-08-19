@@ -26,20 +26,28 @@ export default class HomePage extends Component {
         store={this.store}
         hideLeft
         title={'首页'}
-        rightTitle={'详情'}
-        rightPress={() => RouteHelper.navigate('HomeDetailPage')}
+        // rightTitle={'详情'}
+        // rightPress={() => RouteHelper.navigate('HomeDetailPage')}
       >
         <ScrollView style={styles.container} stickyHeaderIndices={[0]}>
           <ListRow
             title={'重新刷新'}
             onPress={() => {
               this.store.loadData();
+              // 将 观察数据 转换成 普通数据
               console.log(toJS(this.store.data.tid));
             }}
           />
           {
             this.store.data.tid && this.store.data.tid.map((item, index) =>
-              <Text key={item.title}>{JSON.stringify(item)}</Text>
+              <ListRow
+                key={item.id}
+                title={item.title}
+                onPress={() => {
+                  // 跳转详情页
+                  RouteHelper.navigate('HomeDetailPage',{detail: item})
+                }}
+              />
             )
           }
         </ScrollView>
