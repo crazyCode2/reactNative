@@ -1,5 +1,5 @@
 /**
- * 导航视图
+ * 顶部导航栏 组件
  */
 import React, { Component, PureComponent } from 'react';
 import {
@@ -9,7 +9,7 @@ import {
   Image,
   StyleSheet,
   Dimensions,
-} from 'react-native'
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 // 主题

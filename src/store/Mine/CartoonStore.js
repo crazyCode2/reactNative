@@ -27,6 +27,19 @@ export class CartoonStore extends BasePageStore {
       })
   }
 
+  // 加载更多
+  loadMoreData(id,page) {
+    this.data.length === 0 && this.setLoading(true);
+    HttpUtil.get(WANGYICARTOON.url + id + '.json', {page: page}, {show: this.data.length !== 0})
+      .then(res => {
+        this.data.length === 0 && this.setLoading(false);
+        this.setData(res.data)
+      })
+      .catch(e => {
+        this.data.length === 0 ? this.setError(true, e.msg) : Toast.fail('请求失败')
+      })
+  }
+
   // 加载目录
   loadBookCatalog(bookId) {
     this.data.length === 0 && this.setLoading(true);

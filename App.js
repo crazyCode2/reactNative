@@ -14,7 +14,7 @@ import { Platform, StatusBar, Text, TouchableOpacity, View } from 'react-native'
 // 极光推送
 // import JPushModule from 'jpush-react-native';
 import { Toast } from 'teaset';
-
+// 获取汇总后的store
 const store = new BaseAppStore();
 const needLoginPage = ['UserPage'];
 

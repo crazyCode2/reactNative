@@ -1,5 +1,5 @@
 /**
- * 基础应用数据
+ * 基础应用数据(汇总)
  */
 // 用户数据
 import {UserStore} from './UserStore';

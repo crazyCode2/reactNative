@@ -17,7 +17,10 @@ import { inject, observer } from 'mobx-react';
 import { RouteHelper } from 'react-navigation-easy-helper';
 import { BaseContainer } from '../../components';
 
-// @inject 注入需要的store
+/**
+ * @inject 注入需要的store
+ * 可以通过 this.props.userStore 获取上面的值
+ */
 @inject('userStore')
 // @observer 修饰react组件类
 @observer
@@ -51,7 +54,7 @@ export default class LoginPage extends Component {
     userStore.login({
       account: this.state.account, // 用户名
       password: this.state.password, // 密码
-      store: this.store,
+      store: this.store, // 数据
       type: 'account', // 登录方式
       callBack: () => {
         if (userStore.isLogin) {

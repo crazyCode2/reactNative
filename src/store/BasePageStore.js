@@ -1,5 +1,7 @@
 /**
- * 基础页面数据
+ * 基础页面数据(公用状态类)
+ * 其他 store 基于此进行扩展(extends)
+ * 绑定到此上的 store 数据可视为 全局变量
  */
 // observable 是一种让数据的变化可以被观察的方法
 import { observable, action } from 'mobx';
