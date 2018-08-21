@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { RouteHelper } from 'react-navigation-easy-helper';
 import ListRow from 'teaset/components/ListRow/ListRow';
-import { NewsStore } from '../../../store/NewsStore.js';
+import { NewsStore } from '../../../store/Home/NewsStore';
 // toJS 将可观察数据 转换成 普通数据
 import { toJS } from 'mobx';
 import { BaseContainer } from '../../../components';

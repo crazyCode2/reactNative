@@ -4,13 +4,15 @@
 // 基础应用数据(用户数据 + 购物车数据)
 export { BaseAppStore } from './BaseAppStore';
 // // 基础页面数据(公用状态类)
-// import { BasePageStore } from './BasePageStore';
-// // 购物车数据
-// import { ShopCarStore } from './ShopCarStore';
+// export { BasePageStore } from './BasePageStore';
+// 新闻列表数据
+export { NewsStore } from './Home/NewsStore';
+// 购物车数据
+export { ShopCarStore } from './ShopCar/ShopCarStore';
 // 主题
 export { Theme } from './Theme';
 // // 用户信息
-// import { UserStore } from './UserStore';
+// export { UserStore } from './UserStore';
 
 
 // /**

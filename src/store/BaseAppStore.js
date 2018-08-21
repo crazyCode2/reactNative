@@ -4,7 +4,7 @@
 // 用户数据
 import {UserStore} from './UserStore';
 // 购物车数据
-import {ShopCarStore} from './ShopCarStore';
+import {ShopCarStore} from './ShopCar/ShopCarStore';
 
 
 export class BaseAppStore {

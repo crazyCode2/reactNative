@@ -1,12 +1,12 @@
 /**
  * 新闻数据
  */
-import { BasePageStore } from './BasePageStore';
+import { BasePageStore } from '../BasePageStore';
 import { Toast } from 'teaset';
 // 数据请求封装
-import { HttpUtil } from '../utils/HttpUtil';
+import { HttpUtil } from '../../utils/HttpUtil';
 // 常量
-import { WANGYINEWS } from '../base/Constant';
+import { WANGYINEWS } from '../../base/Constant';
 
 export class NewsStore extends BasePageStore {
   // 构造器
