@@ -11,6 +11,8 @@ import CartoonNavTopCell from './CartoonNavTopCell';
 import CartoonNavCell from './CartoonNavCell';
 // 漫画列表 子组件
 import CartoonCell from './CartoonCell';
+// 选择图片 组件
+import CameraButton from './CameraButton';
 
 export {
   BaseContainer,
@@ -18,5 +20,6 @@ export {
   PageListView,
   CartoonNavTopCell,
   CartoonNavCell,
-  CartoonCell
+  CartoonCell,
+  CameraButton
 }
