@@ -13,6 +13,8 @@ import CartoonNavCell from './CartoonNavCell';
 import CartoonCell from './CartoonCell';
 // 选择图片 组件
 import CameraButton from './CameraButton';
+// 带icon的输入框
+import TextInputWithIcon from './TextInputWithIcon';
 
 export {
   BaseContainer,
@@ -21,5 +23,6 @@ export {
   CartoonNavTopCell,
   CartoonNavCell,
   CartoonCell,
-  CameraButton
+  CameraButton,
+  TextInputWithIcon
 }

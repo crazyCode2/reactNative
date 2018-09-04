@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
     "test": "jest"
   },
   "dependencies": {
@@ -19,8 +21,12 @@
     "react-native-code-push": "^5.4.1",
     "react-native-device-info": "^0.22.3",
     "react-native-image-picker": "^0.26.10",
+    "react-native-keyboard-aware-scroll-view": "^0.7.2",
+    "react-native-router-flux": "^4.0.1",
+    "react-native-scrollable-tab-view": "^0.8.0",
     "react-native-shadow-view": "^0.0.1",
     "react-native-splash-screen": "^3.1.1",
+    "react-native-storage": "^0.2.2",
     "react-native-svg": "^6.5.2",
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.8.0",

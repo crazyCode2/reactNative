@@ -2,10 +2,18 @@
  * 加载动画工具类
  */
 import React from "react";
-import { View, Text, Dimensions, TouchableWithoutFeedback, ActivityIndicator, Platform } from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  TouchableWithoutFeedback,
+  ActivityIndicator,
+  Platform
+} from 'react-native';
 import { Overlay } from 'teaset';
 // import Spinkit from 'react-native-spinkit';
 const { width, height } = Dimensions.get('window');
+
 export class LoadingUtils {
   static hint;
   static overlayView;

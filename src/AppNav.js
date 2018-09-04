@@ -38,7 +38,7 @@ export const AppNavigator = createStackNavigator (
       }
     },
   }), {
-    initialRouteName: 'MainPage', // 默认启动页
+    initialRouteName: 'LoginPage', // 默认启动页
     navigationOptions: {
       header: null
     }
