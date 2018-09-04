@@ -16,4 +16,11 @@ export const images = {
   swiper_1: require('./image/guide/swiper_1.jpg'),
   swiper_2: require('./image/guide/swiper_2.jpg'),
   swiper_3: require('./image/guide/swiper_3.jpg'),
+  // tabbar 图标
+  tabbar_home_normal: require('./image/tabbar/tabbar_home_normal.png'),
+  tabbar_home_selected: require('./image/tabbar/tabbar_home_selected.png'),
+  tabbar_shopcar_normal: require('./image/tabbar/tabbar_shopcar_normal.png'),
+  tabbar_shopcar_selected: require('./image/tabbar/tabbar_shopcar_selected.png'),
+  tabbar_mine_normal: require('./image/tabbar/tabbar_mine_normal.png'),
+  tabbar_mine_selected: require('./image/tabbar/tabbar_mine_selected.png'),
 };

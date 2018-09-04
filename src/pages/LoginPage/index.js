@@ -9,6 +9,7 @@ import {
   // Button
 } from 'react-native';
 import { ListRow, Input, Button, Toast } from 'teaset';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 /**
  * @inject 注入需要的store
  * @observer 修饰react组件类
@@ -86,6 +87,7 @@ export default class LoginPage extends Component {
         rightTitle={'注册'}
         rightPress={this._register}
       >
+      <KeyboardAwareScrollView>
         {/*用户名*/}
         <ListRow title='用户名' detail={
           <Input
@@ -117,6 +119,7 @@ export default class LoginPage extends Component {
             onPress={this._login}
           />
         </View>
+      </KeyboardAwareScrollView>
 
         {/*<Button onPress={() => {
           this.props.navigation.navigate('LaunchPage')

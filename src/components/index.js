@@ -15,6 +15,8 @@ import CartoonCell from './CartoonCell';
 import CameraButton from './CameraButton';
 // 带icon的输入框
 import TextInputWithIcon from './TextInputWithIcon';
+// 底部选项卡(导航栏)
+// import TabBar from './TabBar';
 
 export {
   BaseContainer,
@@ -24,5 +26,6 @@ export {
   CartoonNavCell,
   CartoonCell,
   CameraButton,
-  TextInputWithIcon
+  TextInputWithIcon,
+  // TabBar
 }
