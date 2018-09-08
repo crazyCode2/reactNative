@@ -68,7 +68,7 @@ export default class LoginPage extends Component {
           // }
 
           // 跳转主页面
-          RouteHelper.navigate('MainPage')
+          this.props.navigation.navigate('Main');
         }
       }
     });
@@ -76,7 +76,7 @@ export default class LoginPage extends Component {
 
   // 注册操作
   _register = () => {
-    this.props.navigation.navigate('LaunchPage')
+    this.props.navigation.navigate('Launch')
   }
 
   render() {

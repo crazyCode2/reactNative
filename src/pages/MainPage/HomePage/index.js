@@ -21,6 +21,7 @@ export default class HomePage extends Component {
   store = new NewsStore();
 
   render() {
+    console.log(this.props);
     return (
       <BaseContainer
         store={this.store}
@@ -44,8 +45,10 @@ export default class HomePage extends Component {
                 key={item.id}
                 title={item.title}
                 onPress={() => {
+                  console.log(this.props);
                   // 跳转详情页
-                  RouteHelper.navigate('HomeDetailPage',{detail: item})
+                  // RouteHelper.navigate('HomeDetailPage',{detail: item})
+                  this.props.navigation.navigate('HomeDetail', {detail: item})
                 }}
               />
             )

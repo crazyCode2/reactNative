@@ -76,7 +76,7 @@ export default class MainPage extends Component {
             activeTitleStyle={{color: 'red'}}
             icon={images.ic_home}
           >
-            <HomePage />
+            <HomePage {...this.props} />
           </TabView.Sheet>
 
           <TabView.Sheet
