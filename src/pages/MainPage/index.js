@@ -25,17 +25,17 @@ import { images } from '../../res';
 // 检测版本升级
 // import { checkNativeUpdate } from '../../utils/UpdateUtils';
 
-const tabTitles = ['首页', '购物车', '我的'];
-const tabIcons = [
-  images.tabbar_home_normal,
-  images.tabbar_shopcar_normal,
-  images.tabbar_mine_normal
-];
-const tabSelectedIcon = [
-  images.tabbar_home_selected,
-  images.tabbar_shopcar_selected,
-  images.tabbar_mine_selected
-];
+// const tabTitles = ['首页', '购物车', '我的'];
+// const tabIcons = [
+//   images.tabbar_home_normal,
+//   images.tabbar_shopcar_normal,
+//   images.tabbar_mine_normal
+// ];
+// const tabSelectedIcon = [
+//   images.tabbar_home_selected,
+//   images.tabbar_shopcar_selected,
+//   images.tabbar_mine_selected
+// ];
 
 @inject('userStore', 'shopCar')
 @observer

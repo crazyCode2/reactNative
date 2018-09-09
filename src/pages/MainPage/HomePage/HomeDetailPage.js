@@ -82,6 +82,7 @@ export default class HomeDetailPage extends Component {
   }
 
   render() {
+    const { detail } = this.props;
     return (
       <BaseContainer
         leftPress={() => this.props.navigation.goBack()}
@@ -95,6 +96,7 @@ export default class HomeDetailPage extends Component {
             photos={[]}
             onFileUpload={this.onFileUpload.bind(this)}
           />
+          <Text>{JSON.stringify(detail)}</Text>
         </ScrollView>
       </BaseContainer>
     )

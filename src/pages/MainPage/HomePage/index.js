@@ -7,7 +7,9 @@ import {
   Text,
   ScrollView
 } from 'react-native';
-import { RouteHelper } from 'react-navigation-easy-helper';
+// import { RouteHelper } from 'react-navigation-easy-helper';
+// 导入Action的包,处理页面跳转
+import { Actions } from 'react-native-router-flux';
 import ListRow from 'teaset/components/ListRow/ListRow';
 import { NewsStore } from '../../../store/Home/NewsStore';
 // toJS 将可观察数据 转换成 普通数据
@@ -21,7 +23,6 @@ export default class HomePage extends Component {
   store = new NewsStore();
 
   render() {
-    console.log(this.props);
     return (
       <BaseContainer
         store={this.store}
@@ -36,7 +37,7 @@ export default class HomePage extends Component {
             onPress={() => {
               this.store.loadData();
               // 将 观察数据 转换成 普通数据
-              console.log(toJS(this.store.data.tid));
+              // console.log(toJS(this.store.data.tid));
             }}
           />
           {
@@ -45,10 +46,10 @@ export default class HomePage extends Component {
                 key={item.id}
                 title={item.title}
                 onPress={() => {
-                  console.log(this.props);
                   // 跳转详情页
                   // RouteHelper.navigate('HomeDetailPage',{detail: item})
-                  this.props.navigation.navigate('HomeDetail', {detail: item})
+                  // this.props.navigation.navigate('HomeDetail', {detail: item})
+                  Actions.homeDetailPage({detail: item})
                 }}
               />
             )
