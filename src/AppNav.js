@@ -56,13 +56,13 @@ export const AppNavigator = () => {
           key="loginPage"
           component={LoginPage}
           hideNavBar={true}
-          initial={true}
         />
         {/* 主页面/tabbar */}
         <Scene
           key="mainPage"
           component={MainPage}
           hideNavBar={true} // 此处以及其他页都隐藏了导航，我打算自定义组件作为头部导航栏
+          initial={true}
         />
         {/* 首页--详情页 */}
         <Scene
